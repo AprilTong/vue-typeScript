@@ -21,3 +21,23 @@ npm run start
 # 打包
 npm run build
 ```
+
+## 项目规范
+
+-   代码代码风格详见.prettierrc 文件
+-   eslint 校验代码质量
+
+## 文件介绍
+
+-   build webpack 相关配置
+-   src 主开发目录
+
+1. api 请求的接口文件
+2. assets 图片等以及公共的 css 样式文件
+3. components 封装的一些公共组件
+4. pages 页面
+5. router vue-router 路由管理
+6. store vuex 状态管理
+7. utils 常用的工具方法封装
+
+-   static 放置一些变化不大的 json 文件，一般不会修改
