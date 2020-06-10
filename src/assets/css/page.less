@@ -1,0 +1,84 @@
+@import './element.less';
+.web-content {
+    box-sizing: border-box;
+    height: 100%;
+}
+.el-table .tableHeader {
+    background-color: rgba(248, 248, 248, 1);
+    color: #666666;
+    font-weight: bold;
+}
+.el-container .el-table .cell {
+    color: #666666;
+    white-space: nowrap;
+}
+.el-container .el-table .el-button--text {
+    padding: 0px;
+    font-size: 12px;
+}
+.el-pagination .el-select__caret {
+    line-height: 100%;
+}
+.el-popup-parent--hidden {
+    overflow: auto;
+    box-sizing: border-box;
+}
+#app .el-input--mini .el-input__inner {
+    height: 32px;
+    line-height: 32px;
+}
+#app .el-range-editor--mini.el-input__inner {
+    height: 32px;
+}
+.no-data-box {
+    height: 690px;
+    background: #fff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cccccc;
+    p {
+        color: #666666;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    :last-child {
+        margin-top: 10px;
+        color: #999999;
+        font-size: 14px;
+    }
+}
+#app::before,
+#app::after {
+    display: table;
+    content: '';
+}
+#app::after {
+    clear: both;
+}
+
+.blue-font {
+    color: #2f88ff;
+    font-size: 12px;
+}
+.more-text {
+    text-overflow: ellipsis;
+}
+.el-tabs__item {
+    color: #666666;
+}
+.el-radio {
+    color: #666666;
+    font-weight: normal;
+}
+.el-radio-button__inner {
+    border: 1px solid #dadfe3;
+    font-weight: normal;
+}
+.pagination-slot {
+    color: #999999;
+    font-size: 12px;
+    float: left;
+}

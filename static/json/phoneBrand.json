@@ -1,0 +1,114 @@
+[
+    {
+        "value": "HONOR",
+        "desc": "荣耀"
+    },
+    {
+        "value": "APPLE",
+        "desc": "苹果"
+    },
+    {
+        "value": "HUAWEI",
+        "desc": "华为"
+    },
+    {
+        "value": "XIAOMI",
+        "desc": "小米"
+    },
+    {
+        "value": "SAMSUNG",
+        "desc": "三星"
+    },
+    {
+        "value": "OPPO",
+        "desc": "OPPO"
+    },
+    {
+        "value": "VIVO",
+        "desc": "VIVO"
+    },
+    {
+        "value": "MEIZU",
+        "desc": "魅族"
+    },
+    {
+        "value": "GIONEE",
+        "desc": "金立"
+    },
+    {
+        "value": "COOLPAD",
+        "desc": "酷派"
+    },
+    {
+        "value": "LENOVO",
+        "desc": "联想"
+    },
+    {
+        "value": "LETV",
+        "desc": "乐视"
+    },
+    {
+        "value": "ZTE",
+        "desc": "中兴"
+    },
+    {
+        "value": "CHINAMOBILE",
+        "desc": "中国移动"
+    },
+    {
+        "value": "HTC",
+        "desc": "HTC"
+    },
+    {
+        "value": "PEPPER",
+        "desc": "小辣椒"
+    },
+    {
+        "value": "NUBIA",
+        "desc": "努比亚"
+    },
+    {
+        "value": "HISENSE",
+        "desc": "海信"
+    },
+    {
+        "value": "QIKU",
+        "desc": "奇酷"
+    },
+    {
+        "value": "TCL",
+        "desc": "TCL"
+    },
+    {
+        "value": "SONY",
+        "desc": "索尼"
+    },
+    {
+        "value": "SMARTISAN",
+        "desc": "锤子手机"
+    },
+    {
+        "value": "360",
+        "desc": "360手机"
+    },
+    {
+        "value": "ONEPLUS",
+        "desc": "一加手机"
+    },
+    {
+        "value": "LG",
+        "desc": "LG"
+    },
+    {
+        "value": "MOTO",
+        "desc": "摩托罗拉"
+    },
+    {
+        "value": "NOKIA",
+        "desc": "诺基亚"
+    },
+    {
+        "value": "GOOGLE",
+        "desc": "谷歌"
+    }
+]

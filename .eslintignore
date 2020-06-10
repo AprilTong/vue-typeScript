@@ -1,0 +1,6 @@
+dist/*.js
+src/assets
+build
+dll
+static
+postcss.config.js

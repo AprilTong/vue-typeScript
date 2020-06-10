@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "noEmitOnError": true,
+        "moduleResolution": "node",
+        "module": "esnext",
+        // "strict": true,
+        "target": "es6",
+        "removeComments": false,
+        "esModuleInterop": true,
+        "outDir": "bin-debug",
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "lib": ["es2015", "es5", "es6", "dom", "es2015.promise", "esnext"],
+        "types": ["node"],
+        "noImplicitAny": false,
+        // 面向 ES5 和 ES3 时，将 for..of, spread and destructuring  降级
+        "downlevelIteration": false,
+        "allowJs": true,
+        // 忽略 this 的类型检查
+        "noImplicitThis": false,
+        // 支持jsx语法
+        "jsx": "preserve",
+        "jsxFactory": "h"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
