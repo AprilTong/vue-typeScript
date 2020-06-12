@@ -1,9 +1,10 @@
 import axios from 'axios'
+import qs from 'qs'
 import { Message } from 'element-ui'
 import { getLocalStorage } from '../../src/utils/storage'
 
 // 设置请求超时
-axios.defaults.timeout = 10000
+// axios.defaults.timeout = 30000
 // post请求头的设置
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 
@@ -47,11 +48,18 @@ axios.interceptors.response.use(
         }
     },
     (error) => {
-        const { message } = error.response.data
-        Message({
-            message,
-            type: 'error',
-        })
+        if (error.response.status === 504) {
+            Message({
+                message: '请求超时',
+                type: 'error',
+            })
+        } else {
+            const { message } = error.response.data
+            Message({
+                message,
+                type: 'error',
+            })
+        }
         return Promise.reject(error.response)
     },
 )
@@ -63,15 +71,17 @@ axios.interceptors.response.use(
 const http: axiosObj = Object.create(null)
 
 http.get = function (url: string, params: any) {
-    if (params && Object.keys(params).length) {
-        url += '?'
-        const searchText: string[] = []
-        Object.keys(params).forEach((key, index) => {
-            searchText.push(`${index ? '&' : ''}${key}=${params[key]}`)
-        })
-        url += searchText.join('')
-    }
-    return axios.get(url, params)
+    // params = {
+    //     id: [1,2,3]
+    // }
+    // // 数组参数会转换为如下格式
+    // url?id=1&id=2&id=3
+    return axios.get(url, {
+        params: params,
+        paramsSerializer: (params) => {
+            return qs.stringify(params, { indices: false })
+        },
+    })
 }
 
 http.post = function (url: string, params: any) {
@@ -92,7 +102,7 @@ interface fileObj {
 }
 // 上传文件
 http.sendForm = function (url: string, params: fileObj) {
-    const formData = new FormData()
+    const formData = new FormData() as any
     params.file && formData.append('file', params.file)
     const param: dynamicObj = Object.create(null)
     Object.keys(params).map((key) => {
@@ -101,13 +111,14 @@ http.sendForm = function (url: string, params: fileObj) {
         }
     })
     Object.keys(params).length > 0 && formData.append('params', JSON.stringify(param))
+    return axios.post(url, formData)
 }
 
 // 检查业务逻辑
 function checCode(response: any) {
     const data = response.data
     // 未登录
-    if (data.ret == -100) {
+    if (data.ret === -100) {
         location.replace('/#/login')
     }
     if (data.data === null) {
