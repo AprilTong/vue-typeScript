@@ -6,7 +6,7 @@
 
 ```
 # 克隆项目
-git clone https://github.com/Tzrong/vue-typeScript.git
+git clone https://github.com/AprilTong/vue-typeScript.git
 
 # 进入文件夹
 cd vue-typeScript
