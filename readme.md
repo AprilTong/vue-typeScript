@@ -1,6 +1,6 @@
 ## 项目介绍
 
--   本项目基于 webpack4+vue++typeScript+element+axios
+-   本项目基于 webpack4+vue2+typeScript+element+axios
 
 ## 开发
 
